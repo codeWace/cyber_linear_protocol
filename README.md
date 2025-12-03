@@ -38,7 +38,7 @@ See ASSETS_LICENSES.txt for full asset attribution.
 Make sure you have Python 3.x installed.
 - Install dependencies:
 pip install pygame
-Clone or download this repository:
+- Clone or download this repository:
 git clone https://github.com/codeWace/cyber_linear_protocol.git
 
 ## Run the game:
