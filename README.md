@@ -28,11 +28,8 @@ The game features smooth animated backgrounds, preloaded characters, and termina
 - Interact / Ask Question	E
 - Submit Answer	ENTER
 - Delete Character	BACKSPACE
-- Assets
-
-All characters and backgrounds were sourced from Craftpix.net.
-License details: Craftpix Asset License
-See ASSETS_LICENSES.txt for full asset attribution.
+- Assets: All characters and backgrounds were sourced from Craftpix.net.
+- License details: Craftpix Asset License. See ASSETS_LICENSES.txt for full asset attribution.
 
 ## Installation
 Make sure you have Python 3.x installed.
@@ -50,6 +47,8 @@ git clone https://github.com/codeWace/cyber_linear_protocol.git
 - Font: Press Start 2P by The Press Start 2P Project Authors (CodeMan38)
   Licensed under the SIL Open Font License 1.1
   License file included as `assets/fonts/OFL.txt`
+
+## Screenshots
 
 ## Notes
 - Levels 5–7 reuse backgrounds from earlier levels to optimize performance.
