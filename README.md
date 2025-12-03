@@ -22,13 +22,13 @@ The game features smooth animated backgrounds, preloaded characters, and termina
 - End screen with congratulatory animation
 
 ## Controls
-1- Action	Key
-2- Move Left	LEFT ARROW
-3- Move Right	RIGHT ARROW
-4- Interact / Ask Question	E
-5- Submit Answer	ENTER
-6- Delete Character	BACKSPACE
-7 -Assets
+1 - Action	Key
+2 - Move Left	LEFT ARROW
+3 - Move Right	RIGHT ARROW
+4 - Interact / Ask Question	E
+5 - Submit Answer	ENTER
+6 - Delete Character	BACKSPACE
+7 - Assets
 
 All characters and backgrounds were sourced from Craftpix.net.
 License details: Craftpix Asset License
