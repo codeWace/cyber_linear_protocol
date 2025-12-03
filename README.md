@@ -47,6 +47,9 @@ git clone https://github.com/codeWace/cyber_linear_protocol.git
 ## Credits
 - Game and code by Wajiha Tasaduq
 - Assets by Craftpix.net (characters & backgrounds)
+- Font: Press Start 2P by The Press Start 2P Project Authors (CodeMan38)
+  Licensed under the SIL Open Font License 1.1
+  License file included as `assets/fonts/OFL.txt`
 
 ## Notes
 - Levels 5–7 reuse backgrounds from earlier levels to optimize performance.
