@@ -1,43 +1,54 @@
-CYBER: Linear Protocol is a Python-based puzzle-platformer game built with Pygame. Players solve math-based puzzles to unlock portals and progress through seven action-packed levels. 
-The game combines interactive platform mechanics with a terminal-style puzzle interface, delivering both fun and educational challenges.
+CYBER: Linear Protocol
 
-Features
-- Seven Sequential Levels: Each level features a unique background, portal color (pink/blue), and math puzzle.
-- Animated Terminal: Puzzle questions appear with a realistic typing effect. User input stays inside the terminal box for clarity.
-- Dynamic Portal Interaction: Press E near a portal to activate the terminal and submit answers. Correct answers unlock the portal.
-- Smooth Animations: Player and portal movements are animated for a polished gameplay experience.
-- Word-Wrapped Questions: Long equations automatically fit within the terminal.
-- End Screen: Completing all levels triggers a celebratory “YOU DID IT!” screen.
+Author: Wajiha Tasaduq
+License: See ASSETS_LICENSES.txt for asset licenses
 
-Intuitive Menu: Start, Score, and Exit buttons with a simple main menu layout.
+## Overview
+CYBER: Linear Protocol is a 2D cyber-themed educational game built in Python using Pygame.
+Players control a robot character, solve math puzzles, and interact with NPCs to progress through levels.
+The game features smooth animated backgrounds, preloaded characters, and terminal-style question prompts.
 
-Controls:
-- Arrow Keys / A & D: Move player left or right
-- E: Activate terminal at the portal
-- Enter: Submit puzzle answer
-- Backspace: Edit input
+## Features
+- 7 Levels of cyber-themed challenges
+- Terminal-style puzzles with typing input for answers
+- Animated characters and NPCs
+- Preloaded backgrounds and characters for smooth gameplay
+- Repeated backgrounds for levels 5–7 to reduce memory usage
+- Keyboard Controls:
+- LEFT / RIGHT to move
+- E to interact with NPC
+- ENTER to submit answers
+- BACKSPACE to edit input
+- End screen with congratulatory animation
 
-Tech Stack:
-- Python 3.x
-- Pygame
+## Controls
+1- Action	Key
+2- Move Left	LEFT ARROW
+3- Move Right	RIGHT ARROW
+4- Interact / Ask Question	E
+5- Submit Answer	ENTER
+6- Delete Character	BACKSPACE
+7 -Assets
 
-Installation & Running:
+All characters and backgrounds were sourced from Craftpix.net.
+License details: Craftpix Asset License
+See ASSETS_LICENSES.txt for full asset attribution.
 
-1- Clone the repository:
-git clone https://github.com/yourusername/cyber_linear_protocol.git
-
-
-2- Navigate to the project folder:
-cd cyber_linear_protocol
-
-
-3- Install Pygame if not already installed:
+## Installation
+Make sure you have Python 3.x installed.
+- Install dependencies:
 pip install pygame
+Clone or download this repository:
+git clone https://github.com/codeWace/cyber_linear_protocol.git
 
+## Run the game:
+- python main.py
 
-4- Run the game:
-python main.py
+## Credits
+- Game and code by Wajiha Tasaduq
+- Assets by Craftpix.net (characters & backgrounds)
 
-
-License:
-- This project is open-source and available for personal and educational use.
+## Notes
+- Levels 5–7 reuse backgrounds from earlier levels to optimize performance.
+- All sprites and backgrounds are preloaded for smoother gameplay.
+- Clicking the window during gameplay will not freeze the game.
