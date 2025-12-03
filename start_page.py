@@ -9,67 +9,55 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("CYBER: Linear Protocol")
 clock = pygame.time.Clock()
 
-# --- Load menu background ---
-menu_bg = pygame.image.load(os.path.join("assets", "backgrounds", "menubg.jpg")).convert()
-menu_bg = pygame.transform.scale(menu_bg, (SCREEN_WIDTH, SCREEN_HEIGHT))
+FONT = pygame.font.Font("assets/fonts/PressStart2P-Regular.ttf", 14)
 
-# --- Load individual buttons ---
-BUTTON_WIDTH, BUTTON_HEIGHT = 200, 70
+# --- Load animated menu background (Level 1 Day) ---
+bg_frames = []
+bg_folder = os.path.join("assets", "backgrounds", "level1", "Day")
 
-start_btn_img = pygame.image.load("assets/ui/start.png").convert_alpha()
-start_btn_img = pygame.transform.scale(start_btn_img, (BUTTON_WIDTH, BUTTON_HEIGHT))
+for file in sorted(os.listdir(bg_folder)):
+    if file.endswith(".png"):
+        img = pygame.image.load(os.path.join(bg_folder, file)).convert()
+        img = pygame.transform.scale(img, (SCREEN_WIDTH, SCREEN_HEIGHT))
+        bg_frames.append(img)
 
-score_btn_img = pygame.image.load("assets/ui/score.png").convert_alpha()
-score_btn_img = pygame.transform.scale(score_btn_img, (BUTTON_WIDTH, BUTTON_HEIGHT))
-
-exit_btn_img = pygame.image.load("assets/ui/exit.png").convert_alpha()
-exit_btn_img = pygame.transform.scale(exit_btn_img, (BUTTON_WIDTH, BUTTON_HEIGHT))
-
-# --- Button rectangles (for positioning & hover) ---
-start_rect = start_btn_img.get_rect(center=(SCREEN_WIDTH//2, 300))
-score_rect = score_btn_img.get_rect(center=(SCREEN_WIDTH//2, 400))
-exit_rect  = exit_btn_img.get_rect(center=(SCREEN_WIDTH//2, 500))
+bg_index = 0
 
 # --- Start Page Loop ---
 running = True
 while running:
-    dt = clock.tick(FPS) / 1000
+    dt = clock.tick(FPS)
     mouse_pos = pygame.mouse.get_pos()
     mouse_click = pygame.mouse.get_pressed()[0]
 
-    # --- Event Handling ---
+    # --- Events ---
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            pygame.quit()
+            exit()
 
-    # --- Draw background ---
-    screen.blit(menu_bg, (0, 0))
+    # --- Animate background ---
+    bg_index += 0.08
+    if bg_index >= len(bg_frames):
+        bg_index = 0
 
-    # --- Draw buttons with hover effect ---
-    # Start
+    screen.blit(bg_frames[int(bg_index)], (0, 0))
+
+    # --- START text ---
+    start_text = FONT.render("START", True, (255, 180, 255))
+    start_rect = start_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 80))
+
+    # Hover effect
     if start_rect.collidepoint(mouse_pos):
-        screen.blit(start_btn_img, (start_rect.x + 5, start_rect.y))  # move 5px right
-        if mouse_click:
-            print("Start Game clicked!")  # Replace with Level 1 function
-    else:
-        screen.blit(start_btn_img, start_rect)
+        start_text = FONT.render("START", True, (0, 255, 255))
 
-    # Score
-    if score_rect.collidepoint(mouse_pos):
-        screen.blit(score_btn_img, (score_rect.x + 5, score_rect.y))
         if mouse_click:
-            print("Score clicked!")  # Placeholder
-    else:
-        screen.blit(score_btn_img, score_rect)
+            print("Start Game clicked!")
+            # CALL YOUR LEVEL 1 FUNCTION HERE:
+            # level1()
 
-    # Exit
-    if exit_rect.collidepoint(mouse_pos):
-        screen.blit(exit_btn_img, (exit_rect.x + 5, exit_rect.y))
-        if mouse_click:
-            running = False
-    else:
-        screen.blit(exit_btn_img, exit_rect)
+            pygame.time.delay(200)
+
+    screen.blit(start_text, start_rect)
 
     pygame.display.update()
-
-pygame.quit()
