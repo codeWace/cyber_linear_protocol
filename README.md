@@ -49,7 +49,7 @@ git clone https://github.com/codeWace/cyber_linear_protocol.git
   License file included as `assets/fonts/OFL.txt`
 
 ## Screenshots
-[Gameplay](game.play.png)
+![Gameplay](game.play.png)
 
 ## Notes
 - Levels 5–7 reuse backgrounds from earlier levels to optimize performance.
