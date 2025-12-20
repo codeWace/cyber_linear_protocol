@@ -1,6 +1,7 @@
 CYBER: Linear Protocol
 
 > Author: Wajiha Tasaduq
+
 > License: See ASSETS_LICENSES.txt for asset licenses
 
 ## Overview
