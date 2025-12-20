@@ -1,7 +1,7 @@
 CYBER: Linear Protocol
 
-Author: Wajiha Tasaduq
-License: See ASSETS_LICENSES.txt for asset licenses
+> Author: Wajiha Tasaduq
+> License: See ASSETS_LICENSES.txt for asset licenses
 
 ## Overview
 CYBER: Linear Protocol is a 2D cyber-themed educational game built in Python using Pygame.
